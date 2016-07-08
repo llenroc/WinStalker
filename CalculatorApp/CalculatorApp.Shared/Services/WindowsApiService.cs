@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
+using CalculatorApp.Core.Services;
 
 namespace CalculatorApp.Services
 {
@@ -11,10 +12,5 @@ namespace CalculatorApp.Services
             var messageDialog = new MessageDialog(message);
             await messageDialog.ShowAsync();
         }
-    }
-
-    public interface IWindowsApiService
-    {
-        Task ShowMessage(string message);
-    }
+    }    
 }
