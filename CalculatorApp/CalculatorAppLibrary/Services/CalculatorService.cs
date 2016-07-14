@@ -1,6 +1,8 @@
-﻿namespace CalculatorApp.Core.Services
+﻿using System;
+
+namespace CalculatorAppLibrary.Services
 {
-    public class CalculatorService : ICalculatorService
+    public class MathOperationsService : IMathOperationsService
     {
         public double Sum(double numberOne, double numberTwo)
         {
@@ -19,11 +21,12 @@
 
         public double Divide(double numberOne, double numberTwo)
         {
+            if(Math.Abs(numberTwo) < 0.001) throw new DivideByZeroException();
             return numberOne / numberTwo;
         }
     }
 
-    public interface ICalculatorService
+    public interface IMathOperationsService
     {
         double Sum(double numberOne, double numberTwo);
         double Subtract(double numberOne, double numberTwo);

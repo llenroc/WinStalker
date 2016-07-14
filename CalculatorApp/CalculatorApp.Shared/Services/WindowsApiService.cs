@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
-using CalculatorApp.Core.Services;
+using CalculatorAppLibrary.Services;
 
 namespace CalculatorApp.Services
 {

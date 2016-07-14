@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace CalculatorApp.Core.Services
+namespace CalculatorAppLibrary.Services
 {
     public interface IWindowsApiService
     {

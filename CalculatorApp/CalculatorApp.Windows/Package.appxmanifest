@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
 
-  <Identity Name="bd6fe768-3334-470b-bf58-6a85db99273e"
-            Publisher="CN=Mobile"
+  <Identity Name="c384468b-b80d-4b91-b334-4c1be9812c7a"
+            Publisher="CN=nabil"
             Version="1.0.0.0" />
 
   <Properties>
     <DisplayName>CalculatorApp.Windows</DisplayName>
-    <PublisherDisplayName>Mobile</PublisherDisplayName>
+    <PublisherDisplayName>nabil</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
