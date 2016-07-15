@@ -12,7 +12,9 @@ namespace CalculatorApp.ViewModels
         private double _firstValue;
         private double _secondValue;
 
-        public MainPageViewModel(IMathOperationsService mathOperationsService, IWindowsApiService windowsApiService)
+        public MainPageViewModel(
+            IMathOperationsService mathOperationsService,
+            IWindowsApiService windowsApiService)
         {
             _mathOperationsService = mathOperationsService;
             _windowsApiService = windowsApiService;
