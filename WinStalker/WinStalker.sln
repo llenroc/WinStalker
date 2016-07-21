@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinStalker", "WinStalker\Wi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinStalker-Universal", "WinStalker-Universal\WinStalker-Universal.csproj", "{06AD19E3-FDBB-43CF-8FCE-DC4DCF70C9E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinStalker-Core", "WinStalker-Core\WinStalker-Core.csproj", "{A162784E-3EE7-40CB-978A-533D27121D09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,22 @@ Global
 		{06AD19E3-FDBB-43CF-8FCE-DC4DCF70C9E7}.Release|x86.ActiveCfg = Release|x86
 		{06AD19E3-FDBB-43CF-8FCE-DC4DCF70C9E7}.Release|x86.Build.0 = Release|x86
 		{06AD19E3-FDBB-43CF-8FCE-DC4DCF70C9E7}.Release|x86.Deploy.0 = Release|x86
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Debug|ARM.Build.0 = Debug|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Debug|x64.Build.0 = Debug|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Debug|x86.Build.0 = Debug|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Release|ARM.ActiveCfg = Release|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Release|ARM.Build.0 = Release|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Release|x64.ActiveCfg = Release|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Release|x64.Build.0 = Release|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Release|x86.ActiveCfg = Release|Any CPU
+		{A162784E-3EE7-40CB-978A-533D27121D09}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
