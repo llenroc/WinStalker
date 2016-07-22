@@ -38,6 +38,7 @@
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\SocialNetwork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Client.cs" />
     <Compile Include="Services\StalkService.cs" />
   </ItemGroup>
   <ItemGroup>

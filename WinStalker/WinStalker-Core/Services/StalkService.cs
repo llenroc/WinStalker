@@ -20,6 +20,22 @@ namespace WinStalker_Core.Services
         }
 
     }
+
+    public async void GetRequest()
+    {
+        Uri geturi = new Uri("https://api.fullcontact.com/v2/person.json?apiKey=f03b8de1c87465&email=marcioggs@gmail.com"); //TODO: Replace Email by variable
+ /*
+        var response = await client.GetAsync(uri);
+        if (response.IsSuccessStatusCode)
+        {
+            var content = await response.Content.ReadAsStringAsync();
+            Items = JsonConvert.DeserializeObject<List<TodoItem>>(content);
+        }
+       client = new HttpClient();
+            HttpResponseMessage responseGet = await client.GetAsync(geturi);
+            string response = await responseGet.Content.ReadAsStringAsync();*/
+        }
+
     public interface IStalkService
     {
         Task<Person> GetPerson();
