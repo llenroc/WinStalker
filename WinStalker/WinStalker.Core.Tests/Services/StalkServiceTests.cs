@@ -1,7 +1,7 @@
 ﻿using WinStalker.Core.Services;
 using Xunit;
 
-namespace WinStalker.Shared.Tests
+namespace WinStalker.Core.Tests
 {
     public class StalkServiceTests
     {
