@@ -4,9 +4,7 @@ namespace WinStalker.Core.Model
 {
     public class Person
     {
-        public string Name { get; set; }
-        public string FamilyName { get; set; }
-        public string GivenName { get; set; }
+        public string PrimaryPhotoUrl { get; set; }
         public string FullName { get; set; }
         public string Gender { get; set; }
 

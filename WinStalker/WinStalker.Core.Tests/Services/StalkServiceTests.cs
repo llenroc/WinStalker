@@ -9,13 +9,14 @@ namespace WinStalker.Core.Tests
 
         public StalkServiceTests()
         {
+            //TODO: Mockar API e injetar dependência.
             _stalkService = new StalkService();
         }
 
         [Fact]
         public void TesteTest()
         {
-            Assert.Equal(_stalkService.Teste(), 5);
+            Assert.Equal(_stalkService.GetPerson("marcioggs@gmail.com").FullName, "teseet");
         }
 
     }
