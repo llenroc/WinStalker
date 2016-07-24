@@ -25,7 +25,15 @@ namespace WinStalker_Universal
         {
 
             _person  = _stalkService.GetPerson(TextBoxEmail.Text );
-            TextBlockReturn.Text = _person.FullName;
+            TextBlockReturn.Text = "Nome:"+_person.FullName;
+            TextBlockReturn.Text += "\nGênero:"+_person.Gender;
+            TextBlockReturn.Text += "\n\n Social Networks:\n";
+            foreach ( SocialNetwork sn in _person.SocialNetworks)
+            {
+                TextBlockReturn.Text += "\n URL: " + sn.Url;
+                TextBlockReturn.Text += "\n UserName: " + sn.Username;
+            }
+            
         }
     }
 }
