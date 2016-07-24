@@ -7,8 +7,8 @@
     <ProjectGuid>{2611E61B-708F-451D-A607-B012FEB34882}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WinStalker.Shared.Tests</RootNamespace>
-    <AssemblyName>WinStalker.Shared.Tests</AssemblyName>
+    <RootNamespace>WinStalker.Core.Tests</RootNamespace>
+    <AssemblyName>WinStalker.Core.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -76,7 +76,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WinStalker-Core\WinStalker.Core.csproj">
+    <ProjectReference Include="..\WinStalker.Core\WinStalker.Core.csproj">
       <Project>{A162784E-3EE7-40CB-978A-533D27121D09}</Project>
       <Name>WinStalker.Core</Name>
     </ProjectReference>

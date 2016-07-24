@@ -7,8 +7,8 @@
     <ProjectGuid>{fba36441-32e4-41b3-9c55-073f944305e5}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WinStalker</RootNamespace>
-    <AssemblyName>WinStalker</AssemblyName>
+    <RootNamespace>WinStalker.WindowsPhone</RootNamespace>
+    <AssemblyName>WinStalker.WindowsPhone</AssemblyName>
     <DefaultLanguage>pt-BR</DefaultLanguage>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>

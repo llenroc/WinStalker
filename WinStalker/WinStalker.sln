@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinStalker.WindowsPhone", "WinStalker\WinStalker.WindowsPhone.csproj", "{FBA36441-32E4-41B3-9C55-073F944305E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinStalker.WindowsPhone", "WinStalker.WindowsPhone\WinStalker.WindowsPhone.csproj", "{FBA36441-32E4-41B3-9C55-073F944305E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinStalker.Windows", "WinStalker-Universal\WinStalker.Windows.csproj", "{06AD19E3-FDBB-43CF-8FCE-DC4DCF70C9E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinStalker.Windows", "WinStalker.Windows\WinStalker.Windows.csproj", "{06AD19E3-FDBB-43CF-8FCE-DC4DCF70C9E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinStalker.Core", "WinStalker-Core\WinStalker.Core.csproj", "{A162784E-3EE7-40CB-978A-533D27121D09}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinStalker.Core", "WinStalker.Core\WinStalker.Core.csproj", "{A162784E-3EE7-40CB-978A-533D27121D09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinStalker.Core.Tests", "WinStalker.Shared.Tests\WinStalker.Core.Tests.csproj", "{2611E61B-708F-451D-A607-B012FEB34882}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinStalker.Core.Tests", "WinStalker.Core.Tests\WinStalker.Core.Tests.csproj", "{2611E61B-708F-451D-A607-B012FEB34882}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

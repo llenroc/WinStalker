@@ -7,8 +7,8 @@
     <ProjectGuid>{06ad19e3-fdbb-43cf-8fce-dc4dcf70c9e7}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WinStalker_Universal</RootNamespace>
-    <AssemblyName>WinStalker-Universal</AssemblyName>
+    <RootNamespace>WinStalker.Windows</RootNamespace>
+    <AssemblyName>WinStalker.Windows</AssemblyName>
     <DefaultLanguage>pt-BR</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
