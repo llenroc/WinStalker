@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
+﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
+using WinStalker.Core.Model;
+using WinStalker.Core.Services;
+
 
 // O modelo do item de página em branco está documentado em http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -22,9 +13,19 @@ namespace WinStalker_Universal
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private IStalkService _stalkService;
+        private Person _person;
         public MainPage()
         {
             this.InitializeComponent();
+            _stalkService = new StalkService();
+        }
+
+        private void ButtonStalk_OnClick(object sender, RoutedEventArgs e)
+        {
+
+            _person  = _stalkService.GetPerson(TextBoxEmail.Text );
+            TextBlockReturn.Text = _person.FullName;
         }
     }
 }

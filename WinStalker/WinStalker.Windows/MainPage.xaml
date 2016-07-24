@@ -7,7 +7,36 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="ContentPanel" Grid.Row="2" Margin="12,0,12,0">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock
+                Name="TextBlockTitle"
+                Text="WinStalker"
+                FontSize="30"
+                HorizontalAlignment="Center"
+                Margin="24"
+                />
+            <TextBox
+                Name="TextBoxEmail"
+                FontSize="20"
+                Width="300"
+                PlaceholderText="Email"
+                HorizontalAlignment="Center"
+                Text=""
+                />
+            <Button 
+                Name="ButtonStalk"
+                Height="72" 
+                Margin="10"
+                HorizontalAlignment="Center"
+                Width="160" 
+                Click="ButtonStalk_OnClick"
+                Content="Stalk" />
+            <TextBlock
+                Name="TextBlockReturn"
+                Margin="10"
+                />
+        </StackPanel>
 
     </Grid>
 </Page>
