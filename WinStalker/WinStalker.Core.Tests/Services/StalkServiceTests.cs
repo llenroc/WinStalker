@@ -16,7 +16,7 @@ namespace WinStalker.Core.Tests
         [Fact]
         public void TesteTest()
         {
-            Assert.Equal(_stalkService.GetPerson("marcioggs@gmail.com").FullName, "teseet");
+            Assert.Equal("Márcio Gabriel", _stalkService.GetPerson("marcioggs@gmail.com").FullName);
         }
 
     }

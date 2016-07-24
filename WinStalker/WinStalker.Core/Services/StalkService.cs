@@ -1,9 +1,4 @@
-﻿using System.Threading.Tasks;
-using WinStalker.Core.Model;
-using Newtonsoft.Json;
-using System.Net;
-using System;
-using System.Runtime.Serialization.Json;
+﻿using WinStalker.Core.Model;
 using System.Net.Http;
 
 namespace WinStalker.Core.Services
@@ -13,12 +8,10 @@ namespace WinStalker.Core.Services
 
         public Person GetPerson(string email)
         {
-            Person p = new Person();
             //TODO: Colocar URL em arquivo de configuração.
-            string json = GetHttpRequest("https://api.fullcontact.com/v2/person.json?apiKey=f03b8de1c87465&email=marcioggs@gmail.com");
-            //TODO: Fazer o parse dos campos.
+            string json = GetHttpRequest("https://api.fullcontact.com/v2/person.json?apiKey=f03b8de1c87465&email=" + email);
 
-            return p;
+            return new Person(json);
         }
 
         private string GetHttpRequest(string Url)
