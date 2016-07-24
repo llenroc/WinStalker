@@ -30,7 +30,12 @@
                 Margin="10"
                 HorizontalAlignment="Center"
                 Width="160" 
+                Click="ButtonStalk_OnClick"
                 Content="Stalk" />
+            <TextBlock
+                Name="TextBlockReturn"
+                Margin="10"
+                />
         </StackPanel>
 
     </Grid>
