@@ -28,10 +28,16 @@ namespace WinStalker.Core.Services
             return responseString;
         }
 
+        public string GetSocialNetworkIconURL(string typeId)
+        {
+            return "https://api.fullcontact.com/v2/icon/" + typeId + "/64/default?apiKey=f03b8de1c87465";
+        }
+
     }
 
     public interface IStalkService
     {
         Person GetPerson(string email);
+        string GetSocialNetworkIconURL(string typeId);
     }
 }
