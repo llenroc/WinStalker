@@ -1,5 +1,8 @@
 ﻿using WinStalker.Core.Model;
 using System.Net.Http;
+using WinStalker.Core.Util;
+using System.Net;
+using System;
 
 namespace WinStalker.Core.Services
 {
@@ -8,29 +11,41 @@ namespace WinStalker.Core.Services
 
         public Person GetPerson(string email)
         {
-            //TODO: Colocar URL em arquivo de configuração.
-            string json = GetHttpRequest("https://api.fullcontact.com/v2/person.json?apiKey=f03b8de1c87465&email=" + email);
-
+            string json = GetFullContactApiPerson(email);
             return new Person(json);
         }
 
-        private string GetHttpRequest(string Url)
+        private string GetFullContactApiPerson(string email)
         {
-            string responseString = null;
-            var response = new HttpClient().GetAsync(Url).Result;
+            string url = Config.API_BASE_URL + "/person.json?apiKey=" + Config.API_KEY + " &email=" + email;
+            var response = new HttpClient().GetAsync(url).Result;
 
-            //TODO: Tratar códigos de erro.
-            if (response.IsSuccessStatusCode)
+            if (response.StatusCode != HttpStatusCode.OK)
             {
-                responseString = response.Content.ReadAsStringAsync().Result;
+                string errorMessage;
+
+                switch (response.StatusCode)
+                {
+                    case HttpStatusCode.Accepted:
+                        errorMessage = "Data for this person is being prepared. Try again in 5 minutes.";
+                        break;
+                    case HttpStatusCode.NotFound:
+                        errorMessage = "Person not found.";
+                        break;
+                    default:
+                        errorMessage = "An error has ocurred when searching for this person.";
+                        break;
+                }
+
+                throw new Exception(errorMessage);
             }
-            
-            return responseString;
+
+            return response.Content.ReadAsStringAsync().Result;
         }
 
         public string GetSocialNetworkIconURL(string typeId)
         {
-            return "https://api.fullcontact.com/v2/icon/" + typeId + "/64/default?apiKey=f03b8de1c87465";
+            return Config.API_BASE_URL + typeId + "/64/default?apiKey=" + Config.API_KEY;
         }
 
     }
