@@ -6,7 +6,7 @@ using WinStalker.Core.Services;
 
 // O modelo do item de página em branco está documentado em http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace WinStalker_Universal
+namespace WinStalker.Windows
 {
     /// <summary>
     /// Uma página vazia que pode ser usada isoladamente ou navegada dentro de um Quadro.
