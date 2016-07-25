@@ -5,6 +5,10 @@ namespace WinStalker.Core.Model
 {
     public class SocialNetwork
     {
+        public string TypeId { get; set; }
+        public string TypeName { get; set; }
+        public string Username { get; set; }
+        public string Url { get; set; }
 
         internal static List<SocialNetwork> ToList(JToken jtl)
         {
@@ -28,14 +32,8 @@ namespace WinStalker.Core.Model
             {
                 Username = jt["username"].ToString();
             }
-            
+
             Url = jt["url"].ToString();
         }
-
-        public string TypeId { get; set; }
-        public string TypeName { get; set; }
-        public string Username { get; set; }
-        public string Url { get; set; }
-
     }
 }
