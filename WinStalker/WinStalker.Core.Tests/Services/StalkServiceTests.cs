@@ -5,24 +5,24 @@ namespace WinStalker.Core.Tests
 {
     public class StalkServiceTests
     {
-        private readonly IStalkService _stalkService;
+        private readonly IStalkService ss;
 
         public StalkServiceTests()
         {
             //TODO: Refatorar StalkService para desacoplar API e injetar a dependência mockada por aqui.
-            _stalkService = new StalkService();
+            ss = new StalkService();
         }
 
         [Fact]
-        public void TesteTest()
+        public void GetSocialNetworkIconURLTest()
         {
-            //TODO: Exemplo de teste, remover após criar os testes reais.
-            Assert.Equal("Márcio Gabriel", _stalkService.GetPerson("marcioggs@gmail.com").FullName);
+            string e = "https://api.fullcontact.com/v2/icon/facebook/64/default?apiKey=252a1ebb9708464c";
+            string a = ss.GetSocialNetworkIconURL("facebook");
+            Assert.Equal(e, a);
         }
 
         /* TODO: Escrever teste para:
             - Obter pessoa com sucesso
-            - Obter ícone da rede social
             - Pessoa não encontrada
             - Dados da pessoa sendo preparados
             - Erro genérico da API

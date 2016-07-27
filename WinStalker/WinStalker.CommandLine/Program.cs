@@ -47,7 +47,7 @@ namespace WinStalker.CommandLine
 
                 foreach (SocialNetwork sn in person.SocialNetworks)
                 {
-                    Console.WriteLine(sn.TypeName + ": " + ss.GetSocialNetworkIconURL(sn.TypeName));
+                    Console.WriteLine(sn.TypeName + ": " + ss.GetSocialNetworkIconURL(sn.TypeId));
                 }
             }
             catch (Exception e)

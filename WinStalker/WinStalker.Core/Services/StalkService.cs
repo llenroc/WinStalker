@@ -45,7 +45,7 @@ namespace WinStalker.Core.Services
 
         public string GetSocialNetworkIconURL(string typeId)
         {
-            return Config.API_BASE_URL + typeId + "/64/default?apiKey=" + Config.API_KEY;
+            return Config.API_BASE_URL + "/icon/" + typeId + "/64/default?apiKey=" + Config.API_KEY;
         }
 
     }
