@@ -14,7 +14,12 @@ namespace WinStalker.Core.Model
         public Person(JObject jo)
         {
             FullName = jo["contactInfo"]["fullName"].ToString();
-            Gender = jo["demographics"]["gender"].ToString();
+
+            if (jo["demographics"] != null && jo["demographics"]["gender"] != null)
+            {
+                Gender = jo["demographics"]["gender"].ToString();
+            }
+            
             SocialNetworks = SocialNetwork.ToList(jo["socialProfiles"]);
             PrimaryPhotoUrl = getPrimaryPhotoUrl(jo["photos"]);
         }

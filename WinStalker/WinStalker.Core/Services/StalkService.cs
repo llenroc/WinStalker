@@ -45,7 +45,7 @@ namespace WinStalker.Core.Services
                 throw new Exception(errorMessage);
             }
 
-
+            
             return new Person(jo);
         }
 
