@@ -1,35 +1,40 @@
 ﻿using WinStalker.Core.Model;
-using System.Net.Http;
 using WinStalker.Core.Util;
-using System.Net;
 using System;
+using Newtonsoft.Json.Linq;
+using WinStalker.Core.ExternalServices;
 
 namespace WinStalker.Core.Services
 {
     public class StalkService : IStalkService
     {
+        private IPersonService _ps;
+
+        public StalkService() : this(new FullContactPersonService())
+        {
+        }
+
+        public StalkService(IPersonService ips)
+        {
+            _ps = ips;
+        }
 
         public Person GetPerson(string email)
         {
-            string json = GetFullContactApiPerson(email);
-            return new Person(json);
-        }
+            string json = _ps.GetPerson(email);
+            JObject jo = JObject.Parse(json);
 
-        private string GetFullContactApiPerson(string email)
-        {
-            string url = Config.API_BASE_URL + "/person.json?apiKey=" + Config.API_KEY + " &email=" + email;
-            var response = new HttpClient().GetAsync(url).Result;
-
-            if (response.StatusCode != HttpStatusCode.OK)
+            int status = Int32.Parse(jo["status"].ToString());
+            if (status != 200)
             {
                 string errorMessage;
 
-                switch (response.StatusCode)
+                switch (status)
                 {
-                    case HttpStatusCode.Accepted:
+                    case 202:
                         errorMessage = "Data for this person is being prepared. Try again in 5 minutes.";
                         break;
-                    case HttpStatusCode.NotFound:
+                    case 404:
                         errorMessage = "Person not found.";
                         break;
                     default:
@@ -40,7 +45,8 @@ namespace WinStalker.Core.Services
                 throw new Exception(errorMessage);
             }
 
-            return response.Content.ReadAsStringAsync().Result;
+
+            return new Person(jo);
         }
 
         public string GetSocialNetworkIconURL(string typeId)

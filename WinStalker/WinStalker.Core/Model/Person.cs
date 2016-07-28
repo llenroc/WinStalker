@@ -11,10 +11,8 @@ namespace WinStalker.Core.Model
         public string Gender { get; set; }
         public List<SocialNetwork> SocialNetworks { get; set; }
 
-        public Person(string json)
+        public Person(JObject jo)
         {
-            JObject jo = JObject.Parse(json);
-
             FullName = jo["contactInfo"]["fullName"].ToString();
             Gender = jo["demographics"]["gender"].ToString();
             SocialNetworks = SocialNetwork.ToList(jo["socialProfiles"]);
