@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Microsoft.Practices.Prism.Mvvm;
 using Windows.ApplicationModel.Activation;
 using Microsoft.Practices.Unity;
-using MVVMWithPrism;
 
 namespace WinStalker
 {

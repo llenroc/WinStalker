@@ -1,4 +1,4 @@
-﻿namespace MVVMWithPrism
+﻿namespace WinStalker
 {
     public enum Pages
     {
