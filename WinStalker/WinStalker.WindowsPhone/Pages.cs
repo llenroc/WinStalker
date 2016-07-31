@@ -2,7 +2,7 @@
 {
     public enum Pages
     {
-        Main,
-        Second
+        Search,
+        Result
     }
 }

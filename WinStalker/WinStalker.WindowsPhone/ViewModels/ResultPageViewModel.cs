@@ -4,7 +4,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace WinStalker.ViewModels
 {
-    public class SecondPageViewModel : ViewModel
+    public class ResultPageViewModel : ViewModel
     {
 
         private string _email;

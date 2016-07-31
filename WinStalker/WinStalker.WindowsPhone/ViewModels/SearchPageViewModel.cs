@@ -4,12 +4,12 @@ using Microsoft.Practices.Prism.Mvvm.Interfaces;
 
 namespace WinStalker.ViewModels
 {
-    public class MainPageViewModel : ViewModel
+    public class SearchPageViewModel : ViewModel
     {
         private string _email;
         private INavigationService _navigationService;
 
-        public MainPageViewModel(INavigationService navigationService)
+        public SearchPageViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
             StalkCommand = new DelegateCommand(Stalk);
@@ -17,7 +17,7 @@ namespace WinStalker.ViewModels
 
         private void Stalk()
         {
-            _navigationService.Navigate(Pages.Second.ToString(), _email);
+            _navigationService.Navigate(Pages.Result.ToString(), _email);
         }
 
         public string Email

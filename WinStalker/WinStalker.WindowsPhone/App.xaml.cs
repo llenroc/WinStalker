@@ -23,7 +23,7 @@ namespace WinStalker
 
             ViewModelLocationProvider.SetDefaultViewModelFactory
                 ((viewModelType) => _container.Resolve(viewModelType));
-            NavigationService.Navigate(Pages.Main.ToString(), null);
+            NavigationService.Navigate(Pages.Search.ToString(), null);
 
             return Task.FromResult<object>(null);
         }

@@ -2,9 +2,9 @@
 
 namespace WinStalker.Views
 {
-    public sealed partial class MainPage : VisualStateAwarePage
+    public sealed partial class SearchPage : VisualStateAwarePage
     {
-        public MainPage()
+        public SearchPage()
         {
             this.InitializeComponent();
         }
