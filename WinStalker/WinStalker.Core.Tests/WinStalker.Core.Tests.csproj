@@ -70,18 +70,18 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ExternalService\MockPersonService.cs" />
-    <Content Include="MockData\http-202.txt">
+    <None Include="ExternalService\MockData\http-202.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="MockData\http-500.txt">
+    </None>
+    <None Include="ExternalService\MockData\http-500.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="MockData\http-404.txt">
+    </None>
+    <None Include="ExternalService\MockData\http-404.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="MockData\http-200.txt">
+    </None>
+    <None Include="ExternalService\MockData\http-200.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </None>
     <Compile Include="Services\StalkServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

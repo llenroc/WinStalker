@@ -1,7 +1,7 @@
 ﻿using System;
 using WinStalker.Core.Model;
 using WinStalker.Core.Services;
-using WinStalker.Core.Tests.ExternalServices;
+using WinStalker.Core.Tests.ExternalService;
 using Xunit;
 
 namespace WinStalker.Core.Tests

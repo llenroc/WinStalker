@@ -2,7 +2,7 @@
 using WinStalker.Core.Util;
 using System;
 using Newtonsoft.Json.Linq;
-using WinStalker.Core.ExternalServices;
+using WinStalker.Core.ExternalService;
 
 namespace WinStalker.Core.Services
 {

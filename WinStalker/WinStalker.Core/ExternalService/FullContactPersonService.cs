@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using WinStalker.Core.Util;
 
-namespace WinStalker.Core.ExternalServices
+namespace WinStalker.Core.ExternalService
 {
     public class FullContactPersonService : IPersonService
     {

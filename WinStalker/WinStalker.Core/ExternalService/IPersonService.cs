@@ -1,4 +1,4 @@
-﻿namespace WinStalker.Core.ExternalServices
+﻿namespace WinStalker.Core.ExternalService
 {
     public interface IPersonService
     {

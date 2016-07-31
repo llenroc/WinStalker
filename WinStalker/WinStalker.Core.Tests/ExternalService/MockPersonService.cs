@@ -1,7 +1,7 @@
 ﻿using System;
-using WinStalker.Core.ExternalServices;
+using WinStalker.Core.ExternalService;
 
-namespace WinStalker.Core.Tests.ExternalServices
+namespace WinStalker.Core.Tests.ExternalService
 {
     public class MockPersonService : IPersonService
     {
@@ -13,16 +13,16 @@ namespace WinStalker.Core.Tests.ExternalServices
             switch (email)
             {
                 case "teste-200@istalker.com":
-                    fileName = "http-200.txt";
+                    fileName = "http-200.json";
                     break;
                 case "teste-202@istalker.com":
-                    fileName = "http-202.txt";
+                    fileName = "http-202.json";
                     break;
                 case "teste-404@istalker.com":
-                    fileName = "http-404.txt";
+                    fileName = "http-404.json";
                     break;
                 case "teste-500@istalker.com":
-                    fileName = "http-500.txt";
+                    fileName = "http-500.json";
                     break;
                 default:
                     throw new System.Exception("Teste não implementado.");
@@ -35,7 +35,7 @@ namespace WinStalker.Core.Tests.ExternalServices
 
         private string ReadMockFile(string fileName)
         {
-            string[] teste = System.IO.File.ReadAllLines("MockData\\" + fileName);
+            string[] teste = System.IO.File.ReadAllLines("ExternalService\\MockData\\" + fileName);
             return string.Join(Environment.NewLine, teste); ;
         }
     }
