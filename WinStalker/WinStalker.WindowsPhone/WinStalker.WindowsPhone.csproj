@@ -154,6 +154,12 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WinStalker.Core\WinStalker.Core.csproj">
+      <Project>{a162784e-3ee7-40cb-978a-533d27121d09}</Project>
+      <Name>WinStalker.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
