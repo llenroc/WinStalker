@@ -10,7 +10,12 @@ namespace WinStalker.CommandLine
         static void Main(string[] args)
         {
 
-            string email = "marcioggs@gmail.com"; // args[0];
+            string email = null;
+
+            if (args.Length != 0)
+            {
+                email = args[0];
+            }
             
             if (email == null) {
                 Console.WriteLine("-------------------------------");
