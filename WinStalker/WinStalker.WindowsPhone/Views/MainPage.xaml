@@ -16,20 +16,18 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+         </Grid.RowDefinitions>
         <TextBlock VerticalAlignment="Center"
                    HorizontalAlignment="Center"
-                   FontSize="100"
-                   Text="{Binding Hello}" />
+                   FontSize="70"
+                   Text="IStalker" />
         <TextBox Width="300"
                  Grid.Row="1"
-                 Text="{Binding Hello, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                 Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         <Button Grid.Row="2"
-                Content="Say Hi"
-                Command="{Binding SayHiCommand}"/>
-        <Button Grid.Row="3"
-                Content="Navigate"
-                Command="{Binding GoToNextPageCommand}"/>
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Content="Stalk"
+                Command="{Binding StalkCommand}"/>
     </Grid>
 </prism:VisualStateAwarePage>

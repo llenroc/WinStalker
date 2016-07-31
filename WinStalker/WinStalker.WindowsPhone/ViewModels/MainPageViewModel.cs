@@ -6,35 +6,26 @@ namespace WinStalker.ViewModels
 {
     public class MainPageViewModel : ViewModel
     {
-        private string _hello;
+        private string _email;
         private INavigationService _navigationService;
 
         public MainPageViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
-            Hello = "Hi!";
-            SayHiCommand = new DelegateCommand(SayHi);
-            GoToNextPageCommand = new DelegateCommand(GoToNextPage);
+            StalkCommand = new DelegateCommand(Stalk);
         }
 
-        private void GoToNextPage()
+        private void Stalk()
         {
-            _navigationService.Navigate(Pages.Second.ToString(), null);
+            _navigationService.Navigate(Pages.Second.ToString(), _email);
         }
 
-        private void SayHi()
+        public string Email
         {
-            Hello = "Hi Nabil!";
+            get { return _email; }
+            set { SetProperty(ref _email, value); }
         }
 
-        public string Hello
-        {
-            get { return _hello; }
-            set { SetProperty(ref _hello, value); }
-        }
-
-        public DelegateCommand SayHiCommand { get; set; }
-
-        public DelegateCommand GoToNextPageCommand { get; set; }
+        public DelegateCommand StalkCommand { get; set; }
     }
 }

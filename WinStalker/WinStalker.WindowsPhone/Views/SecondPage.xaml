@@ -11,6 +11,6 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="Second Page!!" FontSize="50" />
+        <TextBlock Text="{Binding Email}" FontSize="50" />
     </Grid>
 </prism:VisualStateAwarePage>
