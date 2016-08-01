@@ -14,11 +14,26 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Text="{Binding Person.FullName}"
                    FontSize="20" />
         <TextBlock Text="{Binding Person.Gender}"
                    Grid.Row="1"
                    FontSize="20" />
+
+        <ListBox ItemsSource="{Binding Person.SocialNetworks}"
+                 Grid.Row="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding TypeName}" Grid.Row="0"></TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </prism:VisualStateAwarePage>
