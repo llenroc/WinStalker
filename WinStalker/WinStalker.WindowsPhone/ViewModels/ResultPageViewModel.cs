@@ -9,21 +9,18 @@ namespace WinStalker.ViewModels
     public class ResultPageViewModel : ViewModel
     {
 
-        private string _email;
+        private Person _person;
 
-        public string Email
+        public Person Person
         {
-            get { return _email; }
-            set { SetProperty(ref _email, value); }
+            get { return _person; }
+            set { SetProperty(ref _person, value); }
         }
 
         public override void OnNavigatedTo(object navigationParameter, NavigationMode navigationMode, Dictionary<string, object> viewModelState)
         {
             base.OnNavigatedTo(navigationParameter, navigationMode, viewModelState);
-            _email = (string)navigationParameter;
-
-            StalkService ss = new StalkService();
-            Person person = ss.GetPerson(_email);
+            _person = (Person)navigationParameter;
         }
     }
 }
