@@ -10,12 +10,12 @@
     mvvm:ViewModelLocator.AutoWireViewModel="True"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Margin="20,30">
         <StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Image Source="{Binding Person.PrimaryPhotoUrl}"
-                               Width="50"
-                               Height="50" />
+                               Width="100"
+                               Height="100" />
                 <StackPanel>
                     <TextBlock Text="{Binding Person.FullName}"
                    FontSize="20" />
@@ -25,14 +25,17 @@
                 </StackPanel>
             </StackPanel>
             
-            <StackPanel>
-                <ItemsControl ItemsSource="{Binding Person.SocialNetworks}">
+            <StackPanel Margin="0,30,0,0">
+                <ItemsControl ItemsSource="{Binding Person.SocialNetworks}"
+                              Margin="0,0,0,50">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="0,0,0,15">
                                 <Image Source="{Binding IconUrl}"
                                         Width="50"
-                                        Height="50" />
+                                        Height="50"
+                                        Margin="0,0,15,0"/>
                                 <StackPanel>
                                     <TextBlock Text="{Binding TypeName}"></TextBlock>
                                     <TextBlock Text="{Binding Username}"></TextBlock>
