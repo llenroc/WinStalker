@@ -13,10 +13,15 @@
     <Grid Margin="20,30">
         <StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Image Source="{Binding Person.PrimaryPhotoUrl}"
-                               Width="100"
-                               Height="100" />
-                <StackPanel>
+                <Border Height="100"
+                        Width="100"
+                        CornerRadius="100,100,100,100">
+                    <Border.Background>
+                        <ImageBrush ImageSource="{Binding Person.PrimaryPhotoUrl}" />
+                    </Border.Background>
+                </Border>
+                <StackPanel VerticalAlignment="Center"
+                            Margin="20,0,0,0">
                     <TextBlock Text="{Binding Person.FullName}"
                    FontSize="20" />
                     <TextBlock Text="{Binding Person.Gender}"
@@ -32,11 +37,16 @@
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal"
                                         Margin="0,0,0,15">
-                                <Image Source="{Binding IconUrl}"
+                                <Border Height="50"
                                         Width="50"
-                                        Height="50"
-                                        Margin="0,0,15,0"/>
-                                <StackPanel>
+                                        CornerRadius="100,100,100,100"
+                                        Margin="0,0,15,0">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="{Binding IconUrl}" />
+                                    </Border.Background>
+                                </Border>
+
+                                <StackPanel VerticalAlignment="Center">
                                     <TextBlock Text="{Binding TypeName}"></TextBlock>
                                     <TextBlock Text="{Binding Username}"></TextBlock>
                                     <TextBlock Text="{Binding Url}"></TextBlock>
