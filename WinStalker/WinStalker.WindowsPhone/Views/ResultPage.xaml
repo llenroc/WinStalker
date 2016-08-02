@@ -21,19 +21,25 @@
         <TextBlock Text="{Binding Person.Gender}"
                    Grid.Row="1"
                    FontSize="20" />
+        <Image Source="{Binding Person.PrimaryPhotoUrl}"
+                               Width="50"
+                               Height="50" />
 
-        <ListBox ItemsSource="{Binding Person.SocialNetworks}"
-                 Grid.Row="2">
-            <ListBox.ItemTemplate>
+        <ItemsControl ItemsSource="{Binding Person.SocialNetworks}"
+                      Grid.Row="2">
+            <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Text="{Binding TypeName}" Grid.Row="0"></TextBlock>
-                    </Grid>
+                    <StackPanel>
+                        <TextBlock Text="{Binding TypeName}"></TextBlock>
+                        <TextBlock Text="{Binding Username}"></TextBlock>
+                        <TextBlock Text="{Binding Url}"></TextBlock>
+                        <Image Source="https://d23ikhyr5c5bpx.cloudfront.net/images/social-icons/64/default/facebook.png"
+                               Width="50"
+                               Height="50" />
+                    </StackPanel>
                 </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
     </Grid>
 </prism:VisualStateAwarePage>
