@@ -11,35 +11,42 @@
     mc:Ignorable="d">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <TextBlock Text="{Binding Person.FullName}"
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Person.PrimaryPhotoUrl}"
+                               Width="50"
+                               Height="50" />
+                <StackPanel>
+                    <TextBlock Text="{Binding Person.FullName}"
                    FontSize="20" />
-        <TextBlock Text="{Binding Person.Gender}"
+                    <TextBlock Text="{Binding Person.Gender}"
                    Grid.Row="1"
                    FontSize="20" />
-        <Image Source="{Binding Person.PrimaryPhotoUrl}"
-                               Width="50"
-                               Height="50" />
-
-        <ItemsControl ItemsSource="{Binding Person.SocialNetworks}"
-                      Grid.Row="2">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <Image Source="{Binding IconUrl}"
-                               Width="50"
-                               Height="50" />
-                        <TextBlock Text="{Binding TypeName}"></TextBlock>
-                        <TextBlock Text="{Binding Username}"></TextBlock>
-                        <TextBlock Text="{Binding Url}"></TextBlock>
-                    </StackPanel>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
+                </StackPanel>
+            </StackPanel>
+            
+            <StackPanel>
+                <ItemsControl ItemsSource="{Binding Person.SocialNetworks}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{Binding IconUrl}"
+                                        Width="50"
+                                        Height="50" />
+                                <StackPanel>
+                                    <TextBlock Text="{Binding TypeName}"></TextBlock>
+                                    <TextBlock Text="{Binding Username}"></TextBlock>
+                                    <TextBlock Text="{Binding Url}"></TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+            
+            <StackPanel>
+            </StackPanel>
+        </StackPanel>
 
     </Grid>
 </prism:VisualStateAwarePage>
