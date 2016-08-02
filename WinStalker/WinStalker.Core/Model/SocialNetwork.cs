@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
+using WinStalker.Core.Util;
 
 namespace WinStalker.Core.Model
 {
@@ -9,6 +10,7 @@ namespace WinStalker.Core.Model
         public string TypeName { get; set; }
         public string Username { get; set; }
         public string Url { get; set; }
+        public string IconUrl { get; set; }
 
         internal static List<SocialNetwork> ToList(JToken jtl)
         {
@@ -34,6 +36,8 @@ namespace WinStalker.Core.Model
             }
 
             Url = jt["url"].ToString();
+
+            IconUrl = Config.API_BASE_URL + "/icon/" + TypeId + "/64/default?apiKey=" + Config.API_KEY;
         }
     }
 }

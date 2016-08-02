@@ -43,18 +43,6 @@ namespace WinStalker.CommandLine
                 Console.WriteLine("Person found:");
                 Console.WriteLine("-------------");
                 Console.WriteLine(JsonConvert.SerializeObject(person, Formatting.Indented));
-
-                Console.WriteLine();
-                Console.WriteLine();
-
-                Console.WriteLine("-------------------------");
-                Console.WriteLine("Social network URL icons:");
-                Console.WriteLine("-------------------------");
-
-                foreach (SocialNetwork sn in person.SocialNetworks)
-                {
-                    Console.WriteLine(sn.TypeName + ": " + ss.GetSocialNetworkIconURL(sn.TypeId));
-                }
             }
             catch (Exception e)
             {

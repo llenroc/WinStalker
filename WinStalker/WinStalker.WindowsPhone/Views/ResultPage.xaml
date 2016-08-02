@@ -30,12 +30,12 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
+                        <Image Source="{Binding IconUrl}"
+                               Width="50"
+                               Height="50" />
                         <TextBlock Text="{Binding TypeName}"></TextBlock>
                         <TextBlock Text="{Binding Username}"></TextBlock>
                         <TextBlock Text="{Binding Url}"></TextBlock>
-                        <Image Source="https://d23ikhyr5c5bpx.cloudfront.net/images/social-icons/64/default/facebook.png"
-                               Width="50"
-                               Height="50" />
                     </StackPanel>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>

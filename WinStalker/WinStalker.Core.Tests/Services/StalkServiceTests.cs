@@ -37,6 +37,7 @@ namespace WinStalker.Core.Tests
                     Assert.Equal("Youtube", sn.TypeName);
                     Assert.Equal("https://youtube.com/user/marcioggs", sn.Url);
                     Assert.Equal("marcioggs", sn.Username);
+                    Assert.Equal("https://api.fullcontact.com/v2/icon/youtube/64/default?apiKey=252a1ebb9708464c", sn.IconUrl);
 
                     break;
                 }
@@ -64,14 +65,6 @@ namespace WinStalker.Core.Tests
         {
             Exception ex = Assert.Throws<Exception>(() => ss.GetPerson("teste-500@istalker.com"));
             Assert.Equal("An error has ocurred when searching for this person.", ex.Message);
-        }
-
-        [Fact]
-        public void GetSocialNetworkIconURLTest()
-        {
-            string e = "https://api.fullcontact.com/v2/icon/facebook/64/default?apiKey=252a1ebb9708464c";
-            string a = ss.GetSocialNetworkIconURL("facebook");
-            Assert.Equal(e, a);
         }
 
     }

@@ -49,16 +49,10 @@ namespace WinStalker.Core.Services
             return new Person(jo);
         }
 
-        public string GetSocialNetworkIconURL(string typeId)
-        {
-            return Config.API_BASE_URL + "/icon/" + typeId + "/64/default?apiKey=" + Config.API_KEY;
-        }
-
     }
 
     public interface IStalkService
     {
         Person GetPerson(string email);
-        string GetSocialNetworkIconURL(string typeId);
     }
 }
