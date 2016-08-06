@@ -2,7 +2,6 @@
 using Microsoft.Practices.Prism.Mvvm;
 using Windows.UI.Xaml.Navigation;
 using WinStalker.Core.Model;
-using WinStalker.Core.Services;
 
 namespace WinStalker.ViewModels
 {

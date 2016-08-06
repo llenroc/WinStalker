@@ -9,7 +9,8 @@
     xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
     mvvm:ViewModelLocator.AutoWireViewModel="True"
     mc:Ignorable="d"
-    Background="{}">
+    Background="{}"
+>
 
     <Grid>
         
@@ -19,38 +20,40 @@
         </Grid.Background>
         
         <Grid Margin="0,180,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="71*"/>
-                <ColumnDefinition Width="29*"/>
-            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-
             <TextBlock VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    FontSize="70"
                    Text="WinStalker"
-                   
-                   SelectionChanged="TextBlock_SelectionChanged" Grid.ColumnSpan="2" Margin="36,0,35,0.167" >
+                   Grid.ColumnSpan="2"
+                   Margin="36,0,35,0.167" >
+                
                 <TextBlock.Foreground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
                         <GradientStop Color="#FFFF5B5B" Offset="1"/>
                     </LinearGradientBrush>
                 </TextBlock.Foreground>
+                
             </TextBlock>
+
             <TextBox Width="300"
                      Grid.Row="1"
-                     Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="2" Margin="50,9.833,50,0"/>
+                     Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Grid.ColumnSpan="2"
+                     Margin="50,9.833,50,0" />
+
             <Button Grid.Row="2"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                     Content="Stalk"
-                    Command="{Binding StalkCommand}" Margin="145,0.5,30.401,0"/>
+                    Command="{Binding StalkCommand}"/>
+            
         </Grid>
     </Grid>
 </prism:VisualStateAwarePage>

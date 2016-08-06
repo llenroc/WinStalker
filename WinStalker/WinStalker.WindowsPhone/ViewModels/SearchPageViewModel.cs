@@ -7,6 +7,11 @@ using WinStalker.Core.Model;
 using WinStalker.Core.Services;
 
 namespace WinStalker.ViewModels
+
+    //TODO: Colocar ícone de loading ao clicar em Stalk.
+    //TODO: Colocar painéis clicáveis abrindo o link no browser.
+    //TODO: Ao clicar no botão enter, submeter a pesquisa.
+
 {
     public class SearchPageViewModel : ViewModel
     {

@@ -8,10 +8,5 @@ namespace WinStalker.Views
         {
             this.InitializeComponent();
         }
-
-        private void TextBlock_SelectionChanged(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-        {
-
-        }
     }
 }
